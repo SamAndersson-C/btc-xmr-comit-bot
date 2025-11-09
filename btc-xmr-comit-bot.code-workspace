@@ -1,0 +1,68 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "name": "BTC-XMR COMIT Bot 🤖"
+    }
+  ],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "python.formatting.provider": "black",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": false,
+    "editor.rulers": [88],
+    "files.exclude": {
+      "**/__pycache__": true,
+      "**/*.pyc": true,
+      "**/.pytest_cache": true,
+      "**/venv": false
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "terminal.integrated.env.linux": {
+      "PYTHONPATH": "${workspaceFolder}"
+    }
+  },
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "🧪 Test Rate Fetcher",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/bot/pricing/rates.py",
+        "console": "integratedTerminal",
+        "justMyCode": true
+      },
+      {
+        "name": "🔍 Test HTLC Detector",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/bot/chain/detector.py",
+        "console": "integratedTerminal",
+        "justMyCode": true
+      },
+      {
+        "name": "🌐 Test Blockstream API",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/bot/ingest/blockstream.py",
+        "console": "integratedTerminal",
+        "justMyCode": true
+      },
+      {
+        "name": "🚀 Run Main Bot",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/bot/app.py",
+        "console": "integratedTerminal",
+        "justMyCode": true,
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}"
+        }
+      }
+    ]
+  }
+}

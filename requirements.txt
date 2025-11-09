@@ -1,0 +1,5 @@
+python-bitcoinlib==0.12.2
+requests==2.32.3
+tweepy==4.14.0
+python-dotenv==1.0.1
+apprise==1.8.0
